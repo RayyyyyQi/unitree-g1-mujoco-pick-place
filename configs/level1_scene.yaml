@@ -1,0 +1,51 @@
+# Baseline Task 1 configuration.
+# Instruction: "Pick up the red cube and place it into the blue tray."
+# The G1 base and legs are fixed; the policy controls the waist, right arm,
+# right wrist, and DEX1 gripper. Coordinates use +x forward, +y robot-left,
+# and +z upward.
+task:
+  id: level1_red_cube_to_tray
+  robot: unitree_g1_29dof
+  fixed_base: true
+  instruction: "Pick up the red cube and place it into the blue tray."
+
+variant:
+  id: baseline
+  description: "Nominal table height and nominal object placement."
+
+table:
+  # Center position and half-extents of the tabletop and its four legs.
+  center: [0.62, 0.0, 0.72]
+  half_size: [0.34, 0.42, 0.025]
+  leg_half_size: [0.025, 0.025, 0.3475]
+  color: [0.42, 0.27, 0.15, 1.0]
+
+red_cube:
+  # Dynamic manipulation object. Size values are half-extents in meters.
+  # Friction follows MuJoCo's sliding, torsional, and rolling convention.
+  position: [0.47, 0.10, 0.771]
+  half_size: 0.025
+  mass: 0.10
+  friction: [0.8, 0.02, 0.001]
+  color: [0.9, 0.04, 0.04, 1.0]
+
+tray:
+  # Target receptacle assembled from one bottom plate and four collision walls.
+  position: [0.57, -0.16, 0.745]
+  inner_half_size: [0.10, 0.08]
+  wall_thickness: 0.008
+  wall_height: 0.04
+  bottom_thickness: 0.008
+  color: [0.12, 0.35, 0.75, 1.0]
+
+task_camera:
+  # Primary fixed camera used for visual observation and demonstration video.
+  position: [1.3632, 0.8132, 1.93]
+  look_at: [0.55, 0.0, 0.78]
+  resolution: [640, 480]
+
+task_camera_rear_right:
+  # Secondary fixed camera used to inspect grasp and placement from behind.
+  position: [0.10, -0.7794, 1.68]
+  look_at: [0.55, 0.0, 0.78]
+  resolution: [640, 480]

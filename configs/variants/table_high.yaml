@@ -1,0 +1,43 @@
+# Setup variant: raise the table, cube, and tray by 0.05 m while preserving
+# their baseline horizontal locations. Coordinates use +x forward,
+# +y robot-left, and +z upward.
+variant:
+  id: table_high
+  description: "Table and task objects are 0.05 m above baseline."
+
+table:
+  center: [0.62, 0.0, 0.77]
+  half_size: [0.34, 0.42, 0.025]
+  leg_half_size: [0.025, 0.025, 0.3725]
+  color: [0.42, 0.27, 0.15, 1.0]
+
+red_cube:
+  # Left from the robot's viewpoint; deliberately near the center for right-arm reachability.
+  position: [0.47, 0.10, 0.821]
+  half_size: 0.025
+  mass: 0.10
+  friction: [0.8, 0.02, 0.001]
+  color: [0.9, 0.04, 0.04, 1.0]
+
+tray:
+  # Right from the robot's viewpoint.
+  position: [0.57, -0.16, 0.795]
+  inner_half_size: [0.10, 0.08]
+  wall_thickness: 0.008
+  wall_height: 0.04
+  bottom_thickness: 0.008
+  color: [0.12, 0.35, 0.75, 1.0]
+
+task_camera:
+  # Relative to look_at: front-left azimuth 45 deg, downward elevation 45 deg.
+  # Horizontal radius = 1.15 m; vertical offset = 1.15 m.
+  position: [1.3632, 0.8132, 1.93]
+  look_at: [0.55, 0.0, 0.78]
+  resolution: [640, 480]
+
+task_camera_rear_right:
+  # From table center toward robot-rear, then 60 deg toward robot-right.
+  # Horizontal radius = 0.90 m; downward elevation = 45 deg.
+  position: [0.10, -0.7794, 1.68]
+  look_at: [0.55, 0.0, 0.78]
+  resolution: [640, 480]

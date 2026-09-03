@@ -1,0 +1,43 @@
+# Setup variant: rotate the complete baseline workspace -120 degrees around
+# the robot's vertical axis. This tests waist-yaw alignment rather than simple
+# Cartesian reach. Coordinates use +x forward, +y robot-left, and +z upward.
+variant:
+  id: workspace_right_rot120
+  description: "Complete task workspace rotated -120 degrees around the robot."
+  rotation_about_robot_deg: -120.0
+
+table:
+  center: [-0.310000000000, -0.536935750346, 0.72]
+  half_size: [0.34, 0.42, 0.025]
+  leg_half_size: [0.025, 0.025, 0.3475]
+  yaw_deg: -120.0
+  color: [0.42, 0.27, 0.15, 1.0]
+
+red_cube:
+  position: [-0.148397459622, -0.457031939779, 0.771]
+  yaw_deg: -120.0
+  half_size: 0.025
+  mass: 0.10
+  friction: [0.8, 0.02, 0.001]
+  color: [0.9, 0.04, 0.04, 1.0]
+
+tray:
+  position: [-0.423564064606, -0.413634480157, 0.745]
+  yaw_deg: -120.0
+  inner_half_size: [0.10, 0.08]
+  wall_thickness: 0.008
+  wall_height: 0.04
+  bottom_thickness: 0.008
+  color: [0.12, 0.35, 0.75, 1.0]
+
+task_camera:
+  # Baseline front-left camera rotated with the workspace.
+  position: [0.022651858358, -1.587165830440, 1.93]
+  look_at: [-0.275, -0.476313972081, 0.78]
+  resolution: [640, 480]
+
+task_camera_rear_right:
+  # Baseline rear-right camera rotated with the workspace.
+  position: [-0.724980199710, 0.303097459622, 1.68]
+  look_at: [-0.275, -0.476313972081, 0.78]
+  resolution: [640, 480]

@@ -1,0 +1,18 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.env
+
+# Local runtime and scratch artifacts
+data/
+tmp/
+
+# Private entrance-test source material; review before publishing.
+docs/source/
+docs/source_emails.md
+
+# Local low-table experiments are retained for reference but not submitted.
+configs/variants/table_low*.yaml
