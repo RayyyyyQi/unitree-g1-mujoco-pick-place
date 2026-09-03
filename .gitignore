@@ -17,3 +17,16 @@ docs/source_emails.md
 
 # Local low-table experiments are retained for reference but not submitted.
 configs/variants/table_low*.yaml
+
+# Keep exploratory controllers locally; publish only the reproducible pipeline.
+scripts/*.py
+!scripts/build_smoke_model.py
+!scripts/build_level1_scene.py
+!scripts/rotate_workspace_variant.py
+!scripts/level1_env.py
+!scripts/level1_reset_demo.py
+!scripts/smoke_test.py
+!scripts/sync_planar_scrubber.py
+!scripts/grasp_lift_probe.py
+!scripts/full_pick_to_tray_center.py
+!scripts/swap_left_forearm_level_demo.py
