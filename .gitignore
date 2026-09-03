@@ -9,6 +9,7 @@ __pycache__/
 # Local runtime and scratch artifacts
 data/
 tmp/
+models/generated/
 
 # Private entrance-test source material; review before publishing.
 docs/source/
