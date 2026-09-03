@@ -1,0 +1,17 @@
+{
+  "description": "Evaluation report for the cube-on-pedestal setup variant.",
+  "task_id": "level1_red_cube_to_tray",
+  "instruction": "Pick up the red cube and place it in the tray.",
+  "variant": "cube_on_pedestal",
+  "change_from_baseline": "A fixed pedestal raises the cube's initial grasp height while the tray remains on the table.",
+  "model": "models/task1/cube_on_pedestal.xml",
+  "controller": "scripts/full_pick_to_tray_center.py",
+  "evaluation_mode": "single deterministic physics rollout",
+  "success": true,
+  "measurements": {
+    "final_horizontal_error_cm": 0.800,
+    "release_trigger": "tray_contact",
+    "tray_contact_detected_before_release": true,
+    "tray_contact_detected_after_release": true
+  }
+}

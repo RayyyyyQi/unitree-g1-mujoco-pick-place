@@ -1,0 +1,18 @@
+{
+  "description": "Evaluation report for the workspace-rotated-left setup variant.",
+  "task_id": "level1_red_cube_to_tray",
+  "instruction": "Pick up the red cube and place it in the tray.",
+  "variant": "workspace_left",
+  "change_from_baseline": "The table, cube, tray, markers, and cameras are rotated together around the robot.",
+  "workspace_rotation_deg": 120,
+  "model": "models/task1/workspace_left.xml",
+  "controller": "scripts/full_pick_to_tray_center.py",
+  "evaluation_mode": "single deterministic physics rollout",
+  "success": true,
+  "measurements": {
+    "final_horizontal_error_cm": 0.160,
+    "release_trigger": "settled_soft_contact",
+    "tray_contact_detected_before_release": true,
+    "tray_contact_detected_after_release": true
+  }
+}

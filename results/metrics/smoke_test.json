@@ -1,0 +1,20 @@
+{
+  "description": "Safety and functionality report for the fixed-base G1 and Dex1 model.",
+  "model": "models/base/g1_29dof_dex1_fixed.xml",
+  "overall_passed": true,
+  "checks": {
+    "model_load_and_fixed_base": true,
+    "free_space_stability": true,
+    "safe_motion_and_state_readback": true,
+    "right_dex1_open_close": true,
+    "deterministic_reset": true
+  },
+  "measurements": {
+    "simulation_stability_duration_s": 2.0,
+    "maximum_absolute_free_space_qvel": 2.14e-10,
+    "maximum_joint_tracking_error_rad": 0.0176,
+    "minimum_finger_travel_m": 0.0324,
+    "maximum_reset_qpos_error": 0.0,
+    "maximum_reset_ctrl_error": 0.0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "description": "Index of the submitted baseline and setup-variant evaluation reports.",
+  "protocol": "Each entry reports one deterministic MuJoCo physics rollout using the submitted model and controller.",
+  "reports": [
+    "smoke_test.json",
+    "baseline.json",
+    "table_high.json",
+    "workspace_left.json",
+    "workspace_right.json",
+    "cube_on_pedestal.json",
+    "swap_cube_tray.json"
+  ],
+  "summary": {
+    "evaluated_setups": 6,
+    "successful_setups": 6,
+    "reported_success_rate": 1.0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Evaluation report for the mirrored cube-and-tray setup variant.",
+  "task_id": "level1_red_cube_to_tray",
+  "instruction": "Pick up the red cube and place it in the tray.",
+  "variant": "swap_cube_tray",
+  "change_from_baseline": "The cube and tray are mirrored across the robot's forward centerline.",
+  "model": "models/task1/swap_cube_tray.xml",
+  "controller": "scripts/swap_left_forearm_level_demo.py",
+  "evaluation_mode": "single deterministic physics rollout",
+  "success": true,
+  "measurements": {
+    "final_horizontal_error_cm": 1.311,
+    "release_trigger": "two_mm_settled_contact",
+    "tray_contact_detected_before_release": true,
+    "tray_contact_detected_after_release": true,
+    "left_arm_table_or_tray_contacts": 0,
+    "maximum_left_forearm_tilt_deg": 2.564
+  }
+}

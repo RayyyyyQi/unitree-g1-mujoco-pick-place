@@ -1,0 +1,45 @@
+{
+  "description": "Manifest for the two-view demonstration videos of every successful submitted setup.",
+  "video_specification": {
+    "format": "MP4 (H.264)",
+    "resolution": "640x480",
+    "frames_per_second": 60,
+    "content": "MuJoCo environment and complete control-policy execution"
+  },
+  "camera_views": {
+    "front_left": "Fixed elevated view focused on the tabletop workspace.",
+    "rear_right": "Fixed elevated complementary view from the opposite side."
+  },
+  "scenes": [
+    {
+      "name": "baseline",
+      "success": true,
+      "files": ["baseline_camera_1_front_left.mp4", "baseline_camera_2_rear_right.mp4"]
+    },
+    {
+      "name": "table_high",
+      "success": true,
+      "files": ["table_high_camera_1_front_left.mp4", "table_high_camera_2_rear_right.mp4"]
+    },
+    {
+      "name": "workspace_left",
+      "success": true,
+      "files": ["workspace_left_camera_1_front_left.mp4", "workspace_left_camera_2_rear_right.mp4"]
+    },
+    {
+      "name": "workspace_right",
+      "success": true,
+      "files": ["workspace_right_camera_1_front_left.mp4", "workspace_right_camera_2_rear_right.mp4"]
+    },
+    {
+      "name": "cube_on_pedestal",
+      "success": true,
+      "files": ["cube_on_pedestal_camera_1_front_left.mp4", "cube_on_pedestal_camera_2_rear_right.mp4"]
+    },
+    {
+      "name": "swap_cube_tray",
+      "success": true,
+      "files": ["swap_cube_tray_camera_1_front_left.mp4", "swap_cube_tray_camera_2_rear_right.mp4"]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Evaluation report for the higher-table setup variant.",
+  "task_id": "level1_red_cube_to_tray",
+  "instruction": "Pick up the red cube and place it in the tray.",
+  "variant": "table_high",
+  "change_from_baseline": "The complete tabletop workspace is raised while the task logic is unchanged.",
+  "model": "models/task1/table_high.xml",
+  "controller": "scripts/full_pick_to_tray_center.py",
+  "evaluation_mode": "single deterministic physics rollout",
+  "success": true,
+  "measurements": {
+    "final_horizontal_error_cm": 1.627,
+    "release_trigger": "tray_contact",
+    "tray_contact_detected_before_release": true,
+    "tray_contact_detected_after_release": true
+  }
+}

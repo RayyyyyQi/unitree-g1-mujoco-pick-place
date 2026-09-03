@@ -1,0 +1,27 @@
+{
+  "description": "Evaluation report for the baseline red-cube-to-tray physics rollout.",
+  "task_id": "level1_red_cube_to_tray",
+  "instruction": "Pick up the red cube and place it in the tray.",
+  "variant": "baseline",
+  "model": "models/task1/baseline.xml",
+  "controller": "scripts/full_pick_to_tray_center.py",
+  "evaluation_mode": "single deterministic physics rollout",
+  "success": true,
+  "success_definition": {
+    "cube_centered_in_tray": true,
+    "cube_supported_by_tray_after_release": true,
+    "bilateral_contact_during_lift": true,
+    "bilateral_contact_during_transport": true,
+    "gripper_base_collision": false
+  },
+  "measurements": {
+    "final_horizontal_error_cm": 0.581,
+    "lift_cube_center_z_m": 0.9272,
+    "transport_center_tracking_slip_cm": 0.595,
+    "wrist_support_stage_slip_cm": 0.642,
+    "overall_lift_to_final_slip_cm": 2.827,
+    "release_trigger": "settled_soft_contact",
+    "tray_contact_detected_before_release": true,
+    "tray_contact_detected_after_release": true
+  }
+}
